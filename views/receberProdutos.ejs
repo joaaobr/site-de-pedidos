@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pedidos: </h1>
+    <br>
+    <% if(pedidos.length > 0) { pedidos.forEach( pedidos => { %> 
+        <p><%=  %></p>
+        
+        
+
+    <% })} %>
+
+    <% pedidos.forEach( pedidos => { %> 
+        <p> Nome:   <%= pedidos.produtos[0].nome %></p>
+        <p> Nome:   <%= pedidos.produtos[1].nome %></p>
+        <p> Preço: <%= pedidos.produtos[0].preco %></p>
+        <p> Preço: <%= pedidos.produtos[1].preco %></p>
+        <p>Quantidade: <%= pedidos.produtos[0].quantidade %></p>
+        <p>Quantidade: <%= pedidos.produtos[1].quantidade %></p>
+       
+         <br>
+        <hr>
+        <p><p>Total: <%= pedidos.total %></p></p>
+        <hr>
+        <br>
+        <br>
+
+
+
+    <% }) %>
+</body>
+</html>

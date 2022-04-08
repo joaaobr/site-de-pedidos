@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second stage</title>
+    <style>
+        *{  
+            margin: 0px;
+        }
+        h1{
+            margin-left: 495px;
+            font-size: 23px;
+            height: 40px;
+        }
+        label{
+            margin-left: 500px;
+            color: darkgray;
+            font-size: 13px;
+        }
+        input{
+            height: 32px;
+            width: 390px;
+            border-radius: 4px;
+            border: 1px solid rgb(148, 146, 146);
+            margin-left: 500px;
+        }
+        button{
+            margin-left: 500px;
+            margin-top: 10px;
+            height: 39px;
+            width: 395px;
+            background-color: rgb(214, 18, 18);
+            border: none;
+            color: white;
+            border-radius: 4px;
+        }
+        img{
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 640px;
+        }
+        button:hover{
+        background-color:rgb(200, 30, 30);
+        cursor: pointer;
+        }
+        #ou {
+            margin-top: 50px;
+            margin-left: 600px;
+        }
+        a{
+            
+            text-decoration: none;
+            color: rgb(114, 114, 209);
+        }
+        a:hover{
+            color: rgb(64, 64, 124);
+            text-decoration: none;
+        }
+        #entre{
+            font-size: 14px;
+            margin-left: 600px;
+        }
+        #nome{
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        .container{
+            margin-top:150px;
+            margin-left: 57px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="">Primeiro Nome</label>
+        <input type="text" value="<%= id %>" style="display: none;" name="id" id="id">
+        <br>
+        <input type="text" id="nome" name="nome">
+        <br>
+        <br/>
+        <label for="">Sobrenome</label>
+        <br>
+        <input type="text" id="sobrenome" name="sobrenome">
+        <br>
+        <button type="submit" onclick="UserAddName()">Continuar</button>
+    </div>
+
+    <script src="/lib/index.js"></script>
+    <script src="/lib/localStorage.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>

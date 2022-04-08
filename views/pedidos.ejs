@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Adicionar pedido</h1>
+    Nome do produto: <input type="text" id="nome">
+    preço: <input type="text" id="preco">
+    <button onclick="addProd()">Adicionar</button>
+    
+    <br>
+    <h1>Adicionar ao carrinho</h1>
+    
+
+    <% if(prod.length > 0) { prod.forEach( prod => { %> 
+        
+        <h3 id="nome"><%= prod.nome %></h3>      
+        <p id="preco"><%= prod.preco %></p>    
+        <button onclick="addCart('<%= prod.nome %>', '<%= prod.preco %>')">Adicionar ao carrinho</button>
+
+        <button onclick="finalizarCarrinho()">finaliar</button>
+
+
+    <% })} %>
+
+
+
+    <script src="/lib/localStorage.js"></script>
+    <script src="/lib/index.js"></script>
+    <script src="/pedidos.js"></script>
+</body>
+</html>
